@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const isProjectPage = true // set to true for username.github.io/repo deployments
-const repoName = 'nofud-web-react'
 
 const nextConfig = {
   eslint: {
@@ -13,8 +11,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProjectPage ? `/${repoName}` : '',
-  assetPrefix: isProjectPage ? `/${repoName}/` : '',
+  basePath: '',
+  assetPrefix: '',
 }
 
 export default nextConfig
