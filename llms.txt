@@ -1,0 +1,22 @@
+# llms.txt — Guidelines for AI agents and crawlers
+# More info: https://llmstxt.org/
+
+site: https://nofud.vc
+base_path: /
+contact: contact@nofudinc.com
+
+rules:
+  - allow: /
+  - disallow: /api/
+
+purpose:
+  - research
+  - indexing
+
+attribution:
+  required: true
+  format: "Source: No FUD Ventures (nofud.vc)"
+
+license: "All content © No FUD Ventures. Non-commercial use allowed with attribution."
+
+
