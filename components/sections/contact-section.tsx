@@ -16,9 +16,15 @@ export function ContactSection() {
 
     if (!formData.name || !formData.email || !formData.message) return
 
+    const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_URL
+    if (!scriptUrl) {
+      console.error("Google Apps Script URL is not configured")
+      return
+    }
+
     setIsSubmitting(true)
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(scriptUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
